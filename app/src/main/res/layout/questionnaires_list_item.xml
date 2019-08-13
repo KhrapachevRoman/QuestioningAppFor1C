@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/questionnaires_list_item_tv_section_name"
+        android:background="@color/colorPrimaryLight"
+        android:textColor="@android:color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/item_v_margin"
+        android:padding="@dimen/item_padding"
+        android:text="Text"
+        android:textSize="@dimen/text_size_large" />
+
+
+    <CheckBox
+        android:id="@+id/questionnaires_list_item_tv_question_check_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/item_v_margin"
+        android:button="@null"
+        android:checked="false"
+        android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+        android:padding="@dimen/item_padding"
+        android:text="Question"
+        android:textSize="@dimen/text_size_normal" />
+
+    <TextView
+        android:id="@+id/questionnaires_list_item_tv_section_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/darker_gray"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="Text"
+        android:textSize="@dimen/text_size_small" />
+
+
+</LinearLayout>

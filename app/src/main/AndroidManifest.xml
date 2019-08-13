@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.belugagroup.khrapachevrv.questioningapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+
+        <activity
+            android:name=".ui.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:label="@string/main_activity_label"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.settings.SettingsActivity"
+            android:label="@string/settings_activity_label"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.partners.PartnersActivity"
+            android:label="@string/partners_activity_label"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.main.MainActivity" />
+
+        </activity>
+
+        <activity
+            android:name=".ui.persons.PersonsActivity"
+            android:label="@string/persons_activity_label"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.questionnaire.QuestionnaireActivity" />
+
+        </activity>
+
+        <activity
+            android:name=".ui.polls.PollsActivity"
+            android:label="@string/polls_activity_label"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.partners.PartnersActivity" />
+        </activity>
+        <activity
+            android:name=".ui.questionnaire.QuestionnaireActivity"
+            android:label="@string/questionnaire_activity_label"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.polls.PollsActivity" />
+        </activity>
+
+        <receiver
+            android:name=".receivers.PartnerAlarmReceiver"
+            android:process=":remote">
+
+        </receiver>
+
+        <service
+            android:name=".services.PartnerService"
+            android:exported="false" />
+
+        <receiver
+            android:name=".receivers.TemplateAlarmReceiver"
+            android:process=":remote">
+
+        </receiver>
+
+        <service
+            android:name=".services.TemplateService"
+            android:exported="false" />
+
+        <receiver
+            android:name=".receivers.QuestionnairesAlarmReceiver"
+            android:process=":remote">
+
+        </receiver>
+
+        <service
+            android:name=".services.QuestionnairesService"
+            android:exported="false" />
+
+        <receiver
+            android:name=".receivers.BootCompletedIntentReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <action android:name="android.intent.action.REBOOT" />
+            </intent-filter>
+        </receiver>
+
+
+    </application>
+
+</manifest>

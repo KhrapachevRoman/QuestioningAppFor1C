@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar" />
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/activity_polls_swipe_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBackground"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/activity_polls_ll_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/item_padding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/space"
+                    android:layout_marginRight="@dimen/space"
+                    android:text="@string/partner"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:id="@+id/activity_polls_tv_partner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_normal" />
+
+            </LinearLayout>
+
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/activity_polls_ll_header"
+                android:paddingStart="@dimen/item_h_margin"
+                android:paddingLeft="@dimen/item_h_margin"
+                android:paddingEnd="@dimen/item_h_margin"
+                android:paddingRight="@dimen/item_h_margin">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/activity_polls_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:splitMotionEvents="false" />
+            </android.support.v4.widget.NestedScrollView>
+
+            <include
+                layout="@layout/view_shadow"
+                android:layout_width="wrap_content"
+                android:layout_height="5dp"
+                android:layout_below="@+id/activity_polls_ll_header" />
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

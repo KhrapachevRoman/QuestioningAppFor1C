@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar" />
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/activity_main_swipe_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBackground"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/activity_main_rv_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.v4.widget.NestedScrollView
+                    android:id="@+id/activity_main_sv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/item_h_margin"
+                    android:paddingLeft="@dimen/item_h_margin"
+                    android:paddingEnd="@dimen/item_h_margin"
+                    android:paddingRight="@dimen/item_h_margin">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/activity_main_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:splitMotionEvents="false" />
+                </android.support.v4.widget.NestedScrollView>
+
+                <TextView
+                    android:id="@+id/activity_main_empty_rv_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="@string/empty_main_rv"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="italic" />
+
+                <Button
+                    android:id="@+id/activity_main_btn_start_new"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/fb_margin"
+                    android:paddingLeft="@dimen/btn_padding"
+                    android:paddingRight="@dimen/btn_padding"
+                    android:text="@string/start_new"
+                    android:textColor="@color/colorTextAccent"
+                    android:textSize="@dimen/text_size_normal" />
+            </RelativeLayout>
+
+            <ProgressBar
+                android:id="@+id/activity_main_progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/progress_bar_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/activity_main_progress_bar"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="loading..."
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="@dimen/text_size_small"
+                android:visibility="gone" />
+
+
+            <include
+                layout="@layout/view_shadow"
+                android:layout_width="wrap_content"
+                android:layout_height="5dp" />
+
+        </RelativeLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>
+

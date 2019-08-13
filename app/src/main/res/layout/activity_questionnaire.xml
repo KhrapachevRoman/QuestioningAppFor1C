@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/item_padding"
+            android:paddingLeft="@dimen/item_padding"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/space"
+                android:layout_marginRight="@dimen/space"
+                android:text="@string/partner"
+                android:textSize="@dimen/text_size_normal" />
+
+            <EditText
+                android:id="@+id/activity_questionnaire_tv_partner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:textSize="@dimen/text_size_normal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/item_padding"
+            android:paddingLeft="@dimen/item_padding"
+           >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/space"
+                android:layout_marginRight="@dimen/space"
+                android:text="@string/template"
+                android:textSize="@dimen/text_size_normal" />
+
+            <EditText
+                android:id="@+id/activity_questionnaire_tv_template"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:textSize="@dimen/text_size_normal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/item_padding"
+            android:paddingLeft="@dimen/item_padding">
+
+            <TextView
+                android:id="@+id/activity_questionnaire_tv_person"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/space"
+                android:layout_marginRight="@dimen/space"
+                android:text="@string/person"
+                android:textSize="@dimen/text_size_normal" />
+
+            <EditText
+                android:id="@+id/activity_questionnaire_et_person"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/space"
+                android:layout_marginRight="@dimen/space"
+                android:hint="@string/choose_person"
+                android:focusable="false"
+                android:singleLine="true"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_size_normal" />
+
+            <ImageButton
+                android:id="@+id/activity_questionnaire_button_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                android:tint="@color/colorTextPrimary" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/item_h_margin"
+                        android:paddingLeft="@dimen/item_h_margin"
+                        android:paddingEnd="@dimen/item_h_margin"
+                        android:paddingRight="@dimen/item_h_margin">
+
+                        <TextView
+                            android:id="@+id/activity_questionnaire_tv_introduction"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/item_padding"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/text_size_normal"
+                            android:textStyle="italic" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.2dp"
+                            android:layout_margin="5dp"
+                            android:background="@color/colorAccent" />
+
+
+                        <android.support.v4.widget.NestedScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/activity_questionnaire_rv"
+                                android:splitMotionEvents="false"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </android.support.v4.widget.NestedScrollView>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.2dp"
+                            android:layout_margin="5dp"
+                            android:background="@color/colorAccent" />
+
+                        <TextView
+                            android:id="@+id/activity_questionnaire_tv_conclusion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/item_padding"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/text_size_normal"
+                            android:textStyle="italic" />
+
+
+                        <EditText
+                            android:id="@+id/activity_questionnaire_et_comment"
+                            android:layout_marginTop="5dp"
+                            android:hint="@string/comment"
+                            android:textSize="@dimen/text_size_normal"
+                            android:inputType="textMultiLine"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+
+        </android.support.v4.widget.NestedScrollView>
+
+        <include
+            layout="@layout/view_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="5dp" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Анкетирование</string>
+    <string name="partners_activity_label">Партнеры</string>
+    <string name="polls_activity_label">Доступные анкеты</string>
+    <string name="questionnaire_activity_label">Интервьюирование</string>
+    <string name="menu_complete">Завершить</string>
+    <string name="menu_update">Сохранить</string>
+    <string name="menu_delete">Удалить</string>
+    <string name="main_activity_label">Главная</string>
+    <string name="settings_activity_label">Настройки</string>
+    <string name="progress_dialog">Подождите, идёт выполнение операции.</string>
+    <string name="progress_dialog_save">Сохраняем интервью.</string>
+    <string name="partner">Партнер:</string>
+    <string name="template">Шаблон:</string>
+    <string name="interviewer">Интервьюер</string>
+    <string name="user">Пользователь</string>
+    <string name="password">Пароль</string>
+    <string name="url_hint">Адрес api</string>
+    <string name="exchange_success">Обмен закончен.</string>
+    <string name="success">Успех!</string>
+    <string name="questionnaire_save_success">Документ сохранён.</string>
+    <string name="start_new">Начать новое интервью</string>
+    <string name="empty_main_rv">Список интервью пуст.</string>
+    <string name="input_edit_text_error">Поле обязательно к заполнению!</string>
+    <string name="exchange">Начать обмен</string>
+    <string name="comment">Поле комментария</string>
+    <string name="person">Продавец:</string>
+    <string name="choose_person">Нажмите, чтобы выбрать</string>
+    <string name="persons_activity_label">Продавцы</string>
+    <string name="delete">Удалить</string>
+    <string name="questionnaire_update_success">Изменения сохранены.</string>
+    <string name="questionnaire_delete_success">Документ удалён.</string>
+</resources>

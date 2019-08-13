@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="item_h_margin">4dp</dimen>
+    <dimen name="item_v_margin">8dp</dimen>
+    <dimen name="item_padding">8dp</dimen>
+    <dimen name="fb_margin">24dp</dimen>
+
+    <dimen name="space">4dp</dimen>
+
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_normal">18sp</dimen>
+    <dimen name="text_size_large">22sp</dimen>
+
+    <dimen name="btn_padding">16dp</dimen>
+
+</resources>

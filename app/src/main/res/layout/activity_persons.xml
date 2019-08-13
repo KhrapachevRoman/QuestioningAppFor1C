@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar" />
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/activity_persons_swipe_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBackground"
+            android:orientation="vertical">
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/item_h_margin"
+                android:paddingLeft="@dimen/item_h_margin"
+                android:paddingEnd="@dimen/item_h_margin"
+                android:paddingRight="@dimen/item_h_margin">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/activity_persons_rv"
+                    android:splitMotionEvents="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </android.support.v4.widget.NestedScrollView>
+
+            <include
+                layout="@layout/view_shadow"
+                android:layout_width="wrap_content"
+                android:layout_height="5dp" />
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>
